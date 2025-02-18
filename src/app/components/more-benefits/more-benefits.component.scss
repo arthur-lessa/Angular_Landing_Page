@@ -6,12 +6,14 @@
     align-items: center;
     flex-direction: row;
     gap: 40px;
+    width: 100%;  
 }
 
 .benefit {
     color: $primary-text !important;
     display: flex;
     flex-direction: column;
+    max-width: 500px;  
 
     h3 {
         font-size: 30px;
@@ -19,11 +21,10 @@
     }
 
     p {
-        width: 550px !important;
         font-size: 17px;
         text-align: start;
+        padding: 0 20px;  
     }
-
 }
 
 @media (max-width: 1080px) {
@@ -31,12 +32,22 @@
         align-items: center;
         justify-content: center !important;
         flex-direction: column;
+        gap: 20px;  
     }
 
     .benefit {
         justify-content: center;
         align-items: center;
         text-align: justify;
-        width: 70%;
+        max-width: 90%;  
+    }
+
+    .benefit h3 {
+        font-size: 23px;
+    }
+
+    .benefit p {
+        font-size: 15px !important;
+        padding: 0 20px;  
     }
 }

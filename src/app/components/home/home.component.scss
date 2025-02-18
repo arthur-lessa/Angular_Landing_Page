@@ -85,16 +85,24 @@ main {
     .benefit-section {
         display: flex;
         flex-direction: row;
-    }
+    }   
 }
 
 @media (max-width: 1080px) {
     .main-section .headline {
         margin-top: 70px !important;
+
+        h1{
+            font-size: 50px;
+        }
     }
 
     .benefit-section p {
         text-align: center;
+    }   
+    
+    .cta-section h2{
+        font-size: 35px !important;
     }
 }
 
