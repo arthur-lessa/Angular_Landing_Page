@@ -1,0 +1,20 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-direction: row;
+
+    .socials {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

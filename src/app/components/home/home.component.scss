@@ -1,0 +1,106 @@
+@import "../../../color-variables.scss";
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    font-family: "Roboto", sans-serif;
+
+    span {
+        color: $secondary-text;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    h1 {
+        color: $primary-text;
+        font-size: 55px;
+        font-weight: 900;
+    }
+}
+
+.benefit-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+
+    .benefit-data {
+        border-bottom: 10px solid $primary-color;
+        padding-bottom: 15px;
+
+        h2 {
+            color: $secondary-text;
+            font-size: 60px;
+            font-weight: 600;
+            font-family: "Roboto", sans-serif;
+        }
+    }
+
+    p {
+        color: $primary-text;
+        font-size: 40px;
+        font-weight: 300;
+        font-style: italic;
+
+        b {
+            background: linear-gradient(180deg, $secondary-color, $light-primary-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            font-style: normal;
+        }
+    }
+}
+
+.cta-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+
+    h2 {
+        color: $primary-text;
+        font-size: 50px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1080px) {
+
+    .main-section {
+        flex-direction: row;
+    }
+
+    .benefit-section {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 1080px) {
+    .main-section .headline {
+        margin-top: 70px !important;
+    }
+
+    .benefit-section p {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1230px) and (max-width: 1270px) {
+    .benefit-section p {
+        text-align: justify;
+        word-spacing: -0.2px;
+    }
+}

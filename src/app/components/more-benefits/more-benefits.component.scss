@@ -1,0 +1,42 @@
+@import "../../../color-variables.scss";
+
+.more-benefits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.benefit {
+    color: $primary-text !important;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        font-size: 30px;
+        margin: 20px 0 10px;
+    }
+
+    p {
+        width: 550px !important;
+        font-size: 17px;
+        text-align: start;
+    }
+
+}
+
+@media (max-width: 1080px) {
+    .more-benefits {
+        align-items: center;
+        justify-content: center !important;
+        flex-direction: column;
+    }
+
+    .benefit {
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        width: 70%;
+    }
+}

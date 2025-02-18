@@ -1,0 +1,19 @@
+<section class="form-section">
+    <div class="text">
+        <h3>Fique por dentro das tendências</h3>
+        <p>Quer receber as últimas tendências em desenvolvimento web, dicas exclusivas e novidades sobre nossos serviços
+            diretamente no seu e-mail? Assine nossa newsletter e tenha acesso a conteúdos que vão impulsionar suas
+            vendas e manter você sempre atualizado!</p>
+    </div>
+
+    <form [formGroup]="newsletterForm">
+        <label for="name">Nome</label>
+        <input id="name" formControlName="name" [ngClass]="{ 'fade-out': !isVisible }" />
+        <label for="email">E-mail</label>
+        <input id="email" formControlName="email" [ngClass]="{ 'fade-out': !isVisible }" />
+
+        <btn-primary btn-text="Se inscreva" variant="secondary" (submit)="onSubmit()"
+            [disabled]="newsletterForm.invalid" [loading]="loading()">
+        </btn-primary>
+    </form>
+</section>
