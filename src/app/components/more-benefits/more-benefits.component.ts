@@ -25,9 +25,9 @@ export class MoreBenefitsComponent {
   adjustImageSize(): void {
     if (typeof window !== 'undefined') {
       const screenWidth = window.innerWidth;
-      const image = document.querySelector('section.main-section img') as HTMLImageElement;
-
-      if (image) {
+      const images = document.querySelectorAll('section.more-benefits img');
+  
+      images.forEach((image) => {
         if (screenWidth < 1080) {
           image.setAttribute('width', '300');
           image.setAttribute('height', '300');
@@ -35,7 +35,7 @@ export class MoreBenefitsComponent {
           image.setAttribute('width', '500');
           image.setAttribute('height', '500');
         }
-      }
+      });
     }
   }
 

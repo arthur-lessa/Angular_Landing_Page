@@ -8,10 +8,10 @@
 
     <form [formGroup]="newsletterForm">
         <label for="name">Nome</label>
-        <input id="name" formControlName="name" type="text" autocomplete="given-name" enterkeyhint="next" />
+        <input id="name" formControlName="name" type="text" autocomplete="given-name" enterkeyhint="next" tabindex="1" />
 
         <label for="email">E-mail</label>
-        <input id="email" formControlName="email" type="email" autocomplete="email" enterkeyhint="next" />
+        <input id="email" formControlName="email" type="email" autocomplete="email" enterkeyhint="next" tabindex="2" />
 
         <btn-primary btn-text="Se inscreva" variant="secondary" (submit)="onSubmit()"
             [disabled]="newsletterForm.invalid" [loading]="loading()">
