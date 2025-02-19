@@ -8,9 +8,10 @@
 
     <form [formGroup]="newsletterForm">
         <label for="name">Nome</label>
-        <input id="name" formControlName="name" [ngClass]="{ 'fade-out': !isVisible }" />
+        <input id="name" formControlName="name" type="text" autocomplete="given-name" enterkeyhint="next" />
+
         <label for="email">E-mail</label>
-        <input id="email" formControlName="email" [ngClass]="{ 'fade-out': !isVisible }" />
+        <input id="email" formControlName="email" type="email" autocomplete="email" enterkeyhint="next" />
 
         <btn-primary btn-text="Se inscreva" variant="secondary" (submit)="onSubmit()"
             [disabled]="newsletterForm.invalid" [loading]="loading()">
